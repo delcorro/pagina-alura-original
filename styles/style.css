@@ -203,11 +203,17 @@ td, th {
 
 .mapa {
     padding: 3em 0;
+    background: linear-gradient(#fefefe, #888888) ;
 }
 
 .mapa p {
     margin: 0 0 2em;
     text-align: center;
+}
+
+.mapa-contenido {
+    width: 940px;
+    margin: 0 auto;
 }
 
 .diferenciales {
@@ -230,12 +236,22 @@ td, th {
     line-height: 1.5;
 }
 
+.items::before{
+    content: "★ ";
+}
+
 .items:first-child{
     font-weight: bold;
 }
 
 .imagen-diferenciales {
     width: 60%;
+}
+
+.imagen-diferenciales:hover {
+    opacity: 0.3;
+    transition: 400ms;
+    box-shadow: 10px 10px 30px 15px #000000; 
 }
 
 .video {
@@ -245,4 +261,23 @@ td, th {
 
 .contenido-diferenciales {
     
+}
+
+@media screen and (max-width:960px){
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+   
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video{
+        width: auto;
+    }
+
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+    }
+
 }
